@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bkg" >
+
+    <TextView
+        android:id="@+id/main_text_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/main_text_prompt"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/main_text_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/main_text_prompt"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/main_text_withdraw"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <com.dnake.widget.Button2
+            android:id="@+id/main_btn_defence"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main_btn_defence"
+            android:gravity="bottom|center"
+            android:text="@string/main_btn_defence"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <com.dnake.widget.Button2
+            android:id="@+id/main_btn_ipc"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main_btn_ipc"
+            android:gravity="bottom|center"
+            android:text="@string/main_btn_ipc"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <com.dnake.widget.Button2
+            android:id="@+id/main_btn_zone"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="114dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/main_btn_zone"
+            android:gravity="bottom|center"
+            android:text="@string/main_btn_zone"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <com.dnake.widget.Button2
+            android:id="@+id/main_btn_scene"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_marginLeft="152dp"
+            android:layout_marginTop="114dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/main_btn_scene"
+            android:gravity="bottom|center"
+            android:text="@string/main_btn_scene"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <com.dnake.widget.Button2
+            android:id="@+id/main_btn_setup"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_marginLeft="312dp"
+            android:layout_marginTop="114dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/main_btn_setup"
+            android:gravity="bottom|center"
+            android:text="@string/main_btn_setup"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
