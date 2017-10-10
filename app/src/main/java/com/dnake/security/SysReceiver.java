@@ -24,6 +24,16 @@ public class SysReceiver extends BroadcastReceiver {
 			} else if (e.equals("com.dnake.talk.eHome.setup")) {
 				utils.eHome = it.getBooleanExtra("mode", false);
 			}
+		} else if (a.equals("com.dnake.doorAlarm")) {
+			security.CMS.sendAlarm(1);
+			/*String e = it.getStringExtra("event");
+			if (e.equals("com.dnake.boot"))
+				security.dBroadcast();
+			else if (e.equals("com.dnake.talk.touch")) {
+				WakeTask.refresh();
+			} else if (e.equals("com.dnake.talk.eHome.setup")) {
+				utils.eHome = it.getBooleanExtra("mode", false);
+			}*/
 		}
 	}
 }
