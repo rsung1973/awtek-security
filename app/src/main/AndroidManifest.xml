@@ -28,11 +28,13 @@
             <intent-filter>
 				<action android:name="android.intent.action.BOOT_COMPLETED" />
 			</intent-filter>
-			<intent-filter>
-				<action android:name="com.dnake.broadcast" />
-			</intent-filter>
-		</receiver> 
-
+            <intent-filter>
+                <action android:name="com.dnake.broadcast" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.dnake.doorAlarm" />
+            </intent-filter>
+		</receiver>
         <activity
             android:name="com.dnake.security.MainActivity"
             android:launchMode="singleTask"
