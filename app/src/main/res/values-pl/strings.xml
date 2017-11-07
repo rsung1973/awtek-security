@@ -35,11 +35,15 @@
     <string name="scene_text_timeout">Czas aktywacji:</string>
     <string-array name="scene_timeout_arrays">
         <item>Żaden</item>
+        <item>5s</item>
+        <item>15s</item>
+        <item>20s</item>
+        <item>25s</item>
         <item>30s</item>
         <item>40s</item>
         <item>60s</item>
         <item>100s</item>
-        <item>300s</item>
+        <item>200s</item>
     </string-array>
 
     <string name="zone_text_no">Nr</string>
@@ -65,8 +69,11 @@
         <item>15s</item>
         <item>20s</item>
         <item>25s</item>
+        <item>30s</item>
         <item>40s</item>
         <item>60s</item>
+        <item>100s</item>
+        <item>200s</item>
     </string-array>
     <string-array name="zone_sensor_arrays">
         <item>Dym</item>

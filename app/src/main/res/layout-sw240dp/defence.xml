@@ -64,6 +64,33 @@
             android:text="@string/defence_btn_withdraw"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/loopAlarm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/defence_btn_withdraw"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#FF0000"
+            android:text="保全迴路異常，請檢查!!"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/delayAlarm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/loopAlarm"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#00FF00"
+            android:text=""
+            android:visibility="invisible"/>
+
     </RelativeLayout>
 
 </RelativeLayout>

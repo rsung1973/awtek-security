@@ -35,11 +35,15 @@
     <string name="scene_text_timeout">布防延时:</string>
     <string-array name="scene_timeout_arrays">
         <item>无</item>
+        <item>5秒</item>
+        <item>15秒</item>
+        <item>20秒</item>
+        <item>25秒</item>
         <item>30秒</item>
         <item>40秒</item>
         <item>60秒</item>
         <item>100秒</item>
-        <item>300秒</item>
+        <item>200秒</item>
     </string-array>
 
     <string name="zone_text_no">防区</string>
@@ -65,8 +69,11 @@
         <item>15秒</item>
         <item>20秒</item>
         <item>25秒</item>
+        <item>30秒</item>
         <item>40秒</item>
         <item>60秒</item>
+        <item>100秒</item>
+        <item>200秒</item>
     </string-array>
     <string-array name="zone_sensor_arrays">
         <item>烟感</item>

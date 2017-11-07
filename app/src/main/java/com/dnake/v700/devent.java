@@ -1,5 +1,7 @@
 package com.dnake.v700;
 
+import android.util.Log;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -71,6 +73,29 @@ public class devent {
 				dxml p = new dxml();
 				p.parse(body);
 				int mcu = p.getInt("/params/mcu", 0);
+
+				Log.d("security=>io",body);
+
+                if (mcu == 1) {
+                	if(security.zone!=null) {
+						for (int i = 0; i < 8; i++) {
+							if (security.zone[i] != null) {
+								int status = p.getInt("/params/io" + i, 0x10);
+								if (status != 0x10) {
+									security.zone[i].currentStatus = status;
+								}
+							}
+						}
+					}
+                }
+
+                if (security.defence == security.WITHDRAW)
+                    return;
+
+				if (security.defenceStart == 0 || Math.abs(System.currentTimeMillis() - security.defenceStart) < security.timeout * 1000) {
+					return;
+				}
+
 				if (mcu != 0 && sys.talk.dcode != 0) {
 					//副机IO报警，直接同步到主分机
 					dmsg req = new dmsg();

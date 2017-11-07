@@ -48,6 +48,7 @@
         <activity android:name="com.dnake.security.DefenceLabel"
             android:launchMode="singleTask"
             android:screenOrientation="landscape"
+            android:exported="true"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity android:name="com.dnake.security.ZoneLabel"
@@ -58,6 +59,7 @@
         <activity android:name="com.dnake.security.SceneLabel"
             android:launchMode="singleTask"
             android:screenOrientation="landscape"
+            android:exported="true"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <activity android:name="com.dnake.security.SetupLabel"

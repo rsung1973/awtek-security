@@ -39,18 +39,27 @@ public class SceneLabel extends BaseLabel {
 		}
 
 		Spinner sp = (Spinner)this.findViewById(R.id.scene_timeout);
-		if (security.timeout == 30)
-			sp.setSelection(1);
-		else if (security.timeout == 40)
-			sp.setSelection(2);
-		else if (security.timeout == 60)
-			sp.setSelection(3);
-		else if (security.timeout == 100)
-			sp.setSelection(4);
-		else if (security.timeout == 300)
-			sp.setSelection(5);
-		else
-			sp.setSelection(0);
+
+		sp.setSelection(0);
+        for(int i=0;i<security.zoneDelayTs.length;i++) {
+            if(security.timeout==(int)security.zoneDelayTs[i]) {
+                sp.setSelection(i);
+                break;
+            }
+        }
+
+//		if (security.timeout == 30)
+//			sp.setSelection(1);
+//		else if (security.timeout == 40)
+//			sp.setSelection(2);
+//		else if (security.timeout == 60)
+//			sp.setSelection(3);
+//		else if (security.timeout == 100)
+//			sp.setSelection(4);
+//		else if (security.timeout == 300)
+//			sp.setSelection(5);
+//		else
+//			sp.setSelection(0);
 	}
 
 	@Override
@@ -70,29 +79,50 @@ public class SceneLabel extends BaseLabel {
 		}
 		Spinner sp = (Spinner)this.findViewById(R.id.scene_timeout);
 		int s = sp.getSelectedItemPosition();
-		switch(s) {
-		case 0:
-			security.timeout = 0;
-			break;
-		case 1:
-			security.timeout = 30;
-			break;
-		case 2:
-			security.timeout = 40;
-			break;
-		case 3:
-			security.timeout = 60;
-			break;
-		case 4:
-			security.timeout = 100;
-			break;
-		case 5:
-			security.timeout = 300;
-			break;
-		default:
-			security.timeout = 100;
-			break;
-		}
+
+//        switch (s) {
+//            case 0:
+//                security.timeout = 0;
+//                break;
+//            case 1:
+//                security.timeout = 5;
+//                break;
+//            case 2:
+//                security.timeout = 15;
+//                break;
+//            case 3:
+//                security.timeout = 20;
+//                break;
+//            case 4:
+//                security.timeout = 25;
+//                break;
+//            case 5:
+//                security.timeout = 30;
+//                break;
+//            case 6:
+//                security.timeout = 40;
+//                break;
+//            case 7:
+//                security.timeout = 60;
+//                break;
+//            case 8:
+//                security.timeout = 100;
+//                break;
+//            case 9:
+//                security.timeout = 200;
+//                break;
+//            default:
+//                security.timeout = 100;
+//                break;
+//        }
+
+        security.timeout = (int)security.zoneDelayTs[s];
+        security.zone[0].delay = s;
+        if(s>0) {
+            security.zone[0].type = security.zone_c.NORMAL;
+        } else {
+            security.zone[0].type = security.zone_c.H24;
+        }
 
 		security.save();
 		slaves.setMarks(0x01);

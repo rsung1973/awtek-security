@@ -35,6 +35,7 @@ public class security extends Service {
 	public static int defence = 0;
 	public static zone_c zone[] = null;
 	public static int timeout = 100; // 布防时间
+    public static long defenceStart = 0;
 
 	public static class zone_c {
 		public static final int NORMAL = 0;
@@ -47,6 +48,7 @@ public class security extends Service {
 		public int sensor = 0;
 		public int mode = 0; // 接口模式
 		public int[] scene = new int[4];
+        public int currentStatus = M_3C;
 	}
 
 	public static void load() {
@@ -73,7 +75,12 @@ public class security extends Service {
 			passwd = p.getText("/security/passwd", passwd);
 			timeout = p.getInt("/security/timeout", 100);
 			defence = p.getInt("/security/defence", 0);
-			for (int i = 0; i < MAX; i++) {
+            if (defence == security.WITHDRAW) {
+                defenceStart = 0;
+            } else {
+                defenceStart = System.currentTimeMillis();
+            }
+            for (int i = 0; i < MAX; i++) {
 				String s = "/security/zone" + i;
 				zone[i].defence = p.getInt(s + "/defence", 0);
 				zone[i].type = p.getInt(s + "/type", 0);
@@ -203,16 +210,24 @@ public class security extends Service {
 
 		if (ok) {
 			dSound.stop();
+			defenceStart = System.currentTimeMillis();
 
 			if (st > 0) {
 				security.soundEvent(0);
 				dSound.mSound = new dSound();
+
 			} else
 				security.soundEvent(2);
 
 			CMS.sendDefence();
 			CMS.d600SetZone();
 			save();
+
+            if(ctx!=null) {
+                Intent it = new Intent("com.dnake.defenceStatus");
+                it.putExtra("status", defence);
+                ctx.sendBroadcast(it);
+            }
 		}
 	}
 
@@ -269,7 +284,7 @@ public class security extends Service {
 		CMS.d600AlarmCancel();
 	}
 
-	public static long zoneDelayTs[] = { 0, 5, 15, 20, 25, 40, 60 };
+    public static long zoneDelayTs[] = {0, 5, 15, 20, 25, 30, 40, 60, 100, 200};
 
 	public static Boolean isZoneAlarm(int idx) {
 		if (mIoSt[idx] && zone[idx].type == 1)
@@ -504,6 +519,7 @@ public class security extends Service {
 					} else if (s_defence == 1) { // 布防成功
 						stopPlayer();
 						player = sound.play(sound.defence_on, false, new PlayerOnCompletionListener());
+						invokeIO(true);
 					} else if (s_defence == 2) {
 						stopPlayer();
 						player = sound.play(sound.defence_cancel, false, new PlayerOnCompletionListener());
@@ -533,6 +549,8 @@ public class security extends Service {
 
 		security.dBroadcast();
 		CMS.d600SetZone();
+
+        security.invokeIO(false);
 
 		devent.boot = true;
 	}
@@ -565,4 +583,40 @@ public class security extends Service {
 			ctx.sendBroadcast(it);
 		}
 	}
+
+    public static void invokeIO(boolean forcedCheck) {
+        if (security.defence == security.WITHDRAW || forcedCheck) {
+            dmsg req = new dmsg();
+            req.to("/control/io/sync", null);
+        }
+    }
+
+    public static boolean checkSecurity() {
+        if (zone == null)
+            return false;
+
+        for (int i = 0; i < 8; i++) {
+            if(zone[i]!=null) {
+                if (zone[i].currentStatus != zone[i].mode) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+//	public static int checkDelay() {
+//
+//		if (zone == null)
+//			return 0;
+//
+//		int delay = 0;
+//		for (int i = 0; i < 8; i++) {
+//			if (zone[i].delay > delay) {
+//				delay = zone[i].delay;
+//			}
+//		}
+//		return delay;
+//	}
 }

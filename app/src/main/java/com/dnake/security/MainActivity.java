@@ -5,12 +5,13 @@ import com.dnake.v700.security;
 import com.dnake.v700.sys;
 import com.dnake.widget.Button2;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.CheckBox;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -22,32 +23,18 @@ import android.app.AlertDialog.Builder;
 public class MainActivity extends BaseLabel {
 
 	private Activity ctx;
-	private CheckBox[] cbItem = new CheckBox[8];
+    private TextView[] loopItem = new TextView[8];
+    private TextView[] securityItem = new TextView[8];
 
 	@Override
 	public void onResume() {
 		super.onResume();
 		
-		TextView t = (TextView)this.findViewById(R.id.main_text_status);
-		switch (security.defence)
-		{
-			case 0:
-				t.setText(R.string.main_text_withdraw);
-				this.findViewById(R.id.scene_info).setVisibility(RelativeLayout.GONE);
-				break;
-			case 1:
-				t.setText(R.string.main_text_out);
-				showSceneInfo(0, R.string.main_text_out);
-				break;
-			case 2:
-				t.setText(R.string.main_text_home);
-				showSceneInfo(1, R.string.main_text_home);
-				break;
-			case 3:
-				t.setText(R.string.main_text_sleep);
-				showSceneInfo(2, R.string.main_text_sleep);
-				break;
-		}		
+        security.invokeIO(false);
+        if (security.zone != null) {
+            showSceneInfo();
+        }
+
 	}
 
 	@Override
@@ -95,7 +82,7 @@ public class MainActivity extends BaseLabel {
 					} else {
 						Intent i = new Intent(MainActivity.this, ZoneLabel.class);
 						i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
+//						startActivity(i);
 						LoginLabel login = new LoginLabel();
 						login.start(MainActivity.this, i);
 					}
@@ -144,8 +131,8 @@ public class MainActivity extends BaseLabel {
 
 		for (int i = 0; i < 8; i++)
 		{
-			cbItem[i] = (CheckBox) this.findViewById(R.id.scene_item_m0_0 + i);
-			//cbItem[i].Checked = true;
+			loopItem[i] = (TextView) this.findViewById(R.id.scene_item_m0_0 + i);
+            securityItem[i] = (TextView) this.findViewById(R.id.scene_item_m1_0 + i);
 		}
 
 		DisplayMetrics dm = new DisplayMetrics();
@@ -178,17 +165,21 @@ public class MainActivity extends BaseLabel {
 		}
 	}
 
-	private void showSceneInfo(int defence,int textId)
-	{
-		View info = this.findViewById(R.id.scene_info);
-		info.setVisibility(RelativeLayout.VISIBLE);
+    private void showSceneInfo() {
+        CharSequence[] mode = this.getResources().getTextArray(R.array.zone_mode_arrays);
 
-		TextView t = (TextView)info.findViewById(R.id.scene_item_text);
-		t.setText(textId);
-
-		for (int i = 0; i < 8; i++)
-		{
-			cbItem[i].setChecked(security.zone[i].scene[defence] != 0 ? true : false);
-		}
-	}
+        for (int i = 0; i < 8; i++) {
+            if (loopItem[i] == null || securityItem[i] == null || security.zone[i] == null)
+                continue;
+            loopItem[i].setText(mode[security.zone[i].currentStatus]);
+            securityItem[i].setText(mode[security.zone[i].mode]);
+            if (security.zone[i].currentStatus != security.zone[i].mode) {
+                loopItem[i].setBackgroundColor(Color.argb(255, 255, 0, 0));
+                securityItem[i].setBackgroundColor(Color.argb(255, 255, 0, 0));
+            } else {
+                loopItem[i].setBackgroundColor(Color.argb(0, 0, 0, 0));
+                securityItem[i].setBackgroundColor(Color.argb(0, 0, 0, 0));
+            }
+        }
+    }
 }

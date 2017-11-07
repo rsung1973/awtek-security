@@ -2,14 +2,18 @@ package com.dnake.security;
 
 import com.dnake.v700.security;
 import com.dnake.v700.slaves;
+import com.dnake.v700.sound;
 import com.dnake.widget.Button2;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class DefenceLabel extends BaseLabel {
 	private Button2 btn_out, btn_home, btn_sleep, btn_withdraw;
+	private boolean available = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,25 +23,37 @@ public class DefenceLabel extends BaseLabel {
 		btn_out = (Button2)this.findViewById(R.id.defence_btn_out);
 		btn_out.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				security.setDefence(security.OUT);
-				slaves.setMarks(0x01);
-				load_st();
+				if(available) {
+					security.setDefence(security.OUT);
+					slaves.setMarks(0x01);
+					load_st();
+				} else {
+					sound.play(sound.passwd_err, false);
+				}
 			}
 		});
 		btn_home = (Button2)this.findViewById(R.id.defence_btn_home);
 		btn_home.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				security.setDefence(security.HOME);
-				slaves.setMarks(0x01);
-				load_st();
+				if(available) {
+					security.setDefence(security.HOME);
+					slaves.setMarks(0x01);
+					load_st();
+				} else {
+					sound.play(sound.passwd_err, false);
+				}
 			}
 		});
 		btn_sleep = (Button2)this.findViewById(R.id.defence_btn_sleep);
 		btn_sleep.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				security.setDefence(security.SLEEP);
-				slaves.setMarks(0x01);
-				load_st();
+				if(available) {
+					security.setDefence(security.SLEEP);
+					slaves.setMarks(0x01);
+					load_st();
+				} else {
+					sound.play(sound.passwd_err, false);
+				}
 			}
 		});
 		btn_withdraw = (Button2)this.findViewById(R.id.defence_btn_withdraw);
@@ -77,4 +93,24 @@ public class DefenceLabel extends BaseLabel {
 			break;
 		}
 	}
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        TextView t = (TextView) this.findViewById(R.id.loopAlarm);
+		TextView a = (TextView) this.findViewById(R.id.delayAlarm);
+        available = security.checkSecurity();
+        if(available) {
+			t.setVisibility(RelativeLayout.INVISIBLE);
+			a.setVisibility(RelativeLayout.INVISIBLE);
+        } else {
+            t.setVisibility(RelativeLayout.VISIBLE);
+            if(security.timeout>0) {
+            	available=true;
+				a.setVisibility(RelativeLayout.VISIBLE);
+				a.setText("當保全設定完，將延時 "+security.timeout+" 秒後啟動!!");
+			}
+        }
+    }
 }
