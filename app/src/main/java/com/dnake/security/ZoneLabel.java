@@ -75,6 +75,17 @@ public class ZoneLabel extends BaseLabel {
             sp_mode[i].setSelection(security.zone[i].mode);
         }
 
+        sp_type[0].setEnabled(false);
+        security.zone[0].type = security.zone_c.NORMAL;
+        sp_type[0].setSelection(security.zone[0].type);
+
+        sp_type[5].setEnabled(false);
+        sp_type[5].setSelection(security.zone_c.H24);
+        sp_type[6].setEnabled(false);
+        sp_type[6].setSelection(security.zone_c.H24);
+        sp_type[7].setEnabled(false);
+        sp_type[7].setSelection(security.zone_c.H24);
+
 //		try {
 //
 //		} catch (Exception ex) {

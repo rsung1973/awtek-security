@@ -1,0 +1,185 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:1:1-85:12
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:1:1-85:12
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:1:1-85:12
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:1:1-85:12
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:1:1-85:12
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:1:1-85:12
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:1:1-85:12
+	package
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:2:5-33
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:4:5-30
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:6:5-8:41
+	android:targetSdkVersion
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:8:9-38
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:7:9-35
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:10:22-64
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:12:5-68
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:12:22-65
+application
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:14:5-83:19
+	android:label
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:19:9-41
+	android:hardwareAccelerated
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:17:9-43
+	android:persistent
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:15:9-34
+	android:icon
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:18:9-45
+	android:allowBackup
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:16:9-35
+	android:theme
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:20:9-40
+service#com.dnake.v700.security
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:22:9-26:19
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:22:18-56
+intent-filter#action:name:com.dnake.v700.security
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:23:13-25:29
+action#com.dnake.v700.security
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:24:17-66
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:24:25-63
+receiver#com.dnake.security.SysReceiver
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:27:9-40:14
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:27:19-64
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:28:13-30:20
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:29:5-67
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:29:13-64
+intent-filter#action:name:com.dnake.broadcast
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:31:13-33:29
+action#com.dnake.broadcast
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:32:17-62
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:32:25-59
+intent-filter#action:name:com.dnake.doorAlarm
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:34:13-36:29
+action#com.dnake.doorAlarm
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:35:17-62
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:35:25-59
+intent-filter#action:name:com.dnake.defence
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:37:13-39:29
+action#com.dnake.defence
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:38:17-60
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:38:25-57
+activity#com.dnake.security.MainActivity
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:41:9-50:20
+	android:screenOrientation
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:44:13-50
+	android:launchMode
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:43:13-44
+	android:theme
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:45:13-71
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:42:13-59
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:46:13-49:29
+action#android.intent.action.MAIN
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:47:17-69
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:47:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:48:17-77
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:48:27-74
+activity#com.dnake.security.DefenceLabel
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:51:9-56:20
+	android:screenOrientation
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:53:13-50
+	android:launchMode
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:52:13-44
+	android:exported
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:54:13-36
+	android:theme
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:55:13-71
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:51:19-65
+activity#com.dnake.security.ZoneLabel
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:57:9-61:20
+	android:screenOrientation
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:59:13-50
+	android:launchMode
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:58:13-44
+	android:theme
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:60:13-71
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:57:19-62
+activity#com.dnake.security.SceneLabel
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:62:9-67:20
+	android:screenOrientation
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:64:13-50
+	android:launchMode
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:63:13-44
+	android:exported
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:65:13-36
+	android:theme
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:66:13-71
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:62:19-63
+activity#com.dnake.security.SetupLabel
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:68:9-72:20
+	android:screenOrientation
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:70:13-50
+	android:launchMode
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:69:13-44
+	android:theme
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:71:13-71
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:68:19-63
+activity#com.dnake.security.AlarmLabel
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:73:9-77:20
+	android:screenOrientation
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:75:13-50
+	android:launchMode
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:74:13-44
+	android:theme
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:76:13-71
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:73:19-63
+activity#com.dnake.security.IpcLabel
+ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:78:9-82:20
+	android:screenOrientation
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:80:13-50
+	android:launchMode
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:79:13-44
+	android:theme
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:81:13-71
+	android:name
+		ADDED from C:\Project\Android\Awtek\AW902S9\security\app\src\main\AndroidManifest.xml:78:19-61

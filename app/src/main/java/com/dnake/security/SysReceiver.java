@@ -1,5 +1,6 @@
 package com.dnake.security;
 
+import com.dnake.handler.DefenceHelper;
 import com.dnake.v700.security;
 import com.dnake.v700.utils;
 
@@ -25,7 +26,7 @@ public class SysReceiver extends BroadcastReceiver {
 				utils.eHome = it.getBooleanExtra("mode", false);
 			}
 		} else if (a.equals("com.dnake.doorAlarm")) {
-			security.CMS.sendAlarm(1);
+			security.CMS.sendAlarm(5);
 			/*String e = it.getStringExtra("event");
 			if (e.equals("com.dnake.boot"))
 				security.dBroadcast();
@@ -34,6 +35,16 @@ public class SysReceiver extends BroadcastReceiver {
 			} else if (e.equals("com.dnake.talk.eHome.setup")) {
 				utils.eHome = it.getBooleanExtra("mode", false);
 			}*/
+		} else if (a.equals("com.dnake.defence")) {
+			int defence = it.getIntExtra("mode",security.WITHDRAW);
+			if(defence==security.WITHDRAW) {
+				DefenceHelper.setWithdraw();
+			} else {
+				DefenceHelper.setDefence(defence);
+			}
+			Intent intent = new Intent(ctx, DefenceLabel.class);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			ctx.startActivity(intent);
 		}
 	}
 }

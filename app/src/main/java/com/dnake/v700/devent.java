@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.dnake.handler.DefenceHelper;
 import com.dnake.special.NowIP;
 import com.dnake.special.ipc;
 
@@ -76,25 +77,36 @@ public class devent {
 
 				Log.d("security=>io",body);
 
+				int io[] = new int[8];
+				boolean syncStatus = true;
+
                 if (mcu == 1) {
-                	if(security.zone!=null) {
+					for (int i = 0; i < 8; i++) {
+						io[i] = p.getInt("/params/io" + i, 0x10);
+						if (io[i] == 0x10) {
+							syncStatus = false;
+						}
+					}
+
+					if (syncStatus && security.zone != null) {
 						for (int i = 0; i < 8; i++) {
 							if (security.zone[i] != null) {
-								int status = p.getInt("/params/io" + i, 0x10);
-								if (status != 0x10) {
-									security.zone[i].currentStatus = status;
-								}
+								security.zone[i].currentStatus = io[i];
 							}
 						}
 					}
-                }
-
-                if (security.defence == security.WITHDRAW)
-                    return;
-
-				if (security.defenceStart == 0 || Math.abs(System.currentTimeMillis() - security.defenceStart) < security.timeout * 1000) {
-					return;
 				}
+
+				if (syncStatus && !security.forcedCheck)
+					return;
+				security.forcedCheck = false;
+
+//                if (security.defence == security.WITHDRAW)
+//                    return;
+//
+//				if (security.defenceStart == 0 || Math.abs(System.currentTimeMillis() - security.defenceStart) < security.timeout * 1000) {
+//					return;
+//				}
 
 				if (mcu != 0 && sys.talk.dcode != 0) {
 					//副机IO报警，直接同步到主分机
@@ -103,7 +115,7 @@ public class devent {
 					req.to("/talk/slave/mcu_io", p.toString());
 				} else {
 					// io状态:  0: 正常状态    1:断开    2:闭合    0x10: 状态未发生变化
-					int io[] = new int[8];
+//					int io[] = new int[8];
 					Boolean bell = false;
 					for(int i=0; i<8; i++) {
 						io[i] = p.getInt("/params/io"+i, 0x10);
@@ -202,7 +214,7 @@ public class devent {
 		};
 		elist.add(de);
 
-		de = new devent("/security/broadcast/data") {
+		/*de = new devent("/security/broadcast/data") {
 			@Override
 			public void process(String body) {
 				dmsg.ack(200, null);
@@ -245,7 +257,7 @@ public class devent {
 				}
 			}
 		};
-		elist.add(de);
+		elist.add(de);*/
 
 		de = new devent("/security/web/nowip/read") {
 			@Override
@@ -321,6 +333,61 @@ public class devent {
 					ipc.rtsp[i] = p.getText("/params/r"+i+"/url");
 				}
 				ipc.save();
+			}
+		};
+		elist.add(de);
+
+		de = new devent("/security/broadcast/data") {
+			@Override
+			public void process(String body) {
+				dmsg.ack(200, null);
+
+				dxml p = new dxml();
+				p.parse(body);
+				int build = p.getInt("/event/build", 0);
+				int unit = p.getInt("/event/unit", 0);
+				int floor = p.getInt("/event/floor", 0);
+				int family = p.getInt("/event/family", 0);
+				int mode = p.getInt("/event/mode", 0);
+				if (sys.talk.dcode == 0 &&
+						security.mHave == false &&
+						build == sys.talk.building &&
+						unit == sys.talk.unit &&
+						floor == sys.talk.floor &&
+						family == sys.talk.family) {
+/*					if (utils.eHome) {
+						//中华电信eHome模式，不处理我们自己的流程。
+						if (mode == 2) //小门口机
+							utils.eHomeCard(security.mContext, p.getText("/event/card"));
+						return;
+					}*/
+
+					if (mode == 2) { //小门口机
+						if (security.defence == security.WITHDRAW) {
+//							if(security.checkSecurity() || security.timeout>0 /*回路状态正常*/)//增加io回路状态判断
+//								security.setDefence(security.OUT);
+							if(DefenceHelper.setDefence(security.OUT)) {
+								security.save();
+								security.nBroadcast();
+							} else {
+//                                dmsg req = new dmsg();
+//                                req.to("/talk/slave/deny", null);
+                            }
+						}
+						else {
+							security.setDefence(security.WITHDRAW);
+							security.save();
+							security.nBroadcast();
+						}
+					} else { //大门口机、围墙机只撤防
+						if (security.defence != security.WITHDRAW) {
+							security.setDefence(security.WITHDRAW);
+							security.save();
+							security.nBroadcast();
+						}
+					}
+					slaves.setMarks(0x01);
+				}
 			}
 		};
 		elist.add(de);

@@ -1,0 +1,234 @@
+[
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_text_bkg.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_text_bkg.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_spinner_text2.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\spinner_text2.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_alarm.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\alarm.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_btn_setup.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\main_btn_setup.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_defence_btn_out_b.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\defence_btn_out_b.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_login.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\login.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setup_div.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\setup_div.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setup_btn_passwd.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\setup_btn_passwd.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_btn_scene.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\main_btn_scene.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setup_btn_ok.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\setup_btn_ok.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\anim_rotate.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\anim\\rotate.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_btn_unlock_b.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_btn_unlock_b.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_defence_btn_withdraw_a.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\defence_btn_withdraw_a.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_btn_left.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_btn_left.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_spinner_text.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\spinner_text.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_scene.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\scene.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_ipc.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\ipc.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\anim_translate.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\anim\\translate.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_defence_btn_sleep_a.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\defence_btn_sleep_a.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_zone.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\zone.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_defence_btn_home_b.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\defence_btn_home_b.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_main.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\main.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_defence.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\defence.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_defence.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\defence.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_setup.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\setup.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_alarm_bkg.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\alarm_bkg.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_bkg.jpg.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\main_bkg.jpg"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_alarm_bkg2.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\alarm_bkg2.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setup_btn_passwd2.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\setup_btn_passwd2.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_btn_ipc.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\main_btn_ipc.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_btn_stop.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_btn_stop.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_zone.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\zone.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sub_bkg.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\sub_bkg.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_bkg.jpg.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_bkg.jpg"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_defence_btn_withdraw_b.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\defence_btn_withdraw_b.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_btn_unit.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_btn_unit.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_btn_start_b.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_btn_start_b.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_btn_right.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_btn_right.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_spinner_text.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\spinner_text.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_defence_btn_out_a.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\defence_btn_out_a.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_ipc.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\ipc.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_main.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\main.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\anim_scale.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\anim\\scale.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sub_bkg2.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\sub_bkg2.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_btn_zone.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\main_btn_zone.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_btn_unlock.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_btn_unlock.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_defence_btn_home_a.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\defence_btn_home_a.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_login.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\login.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_btn_start.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_btn_start.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_defence_btn_sleep_b.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\defence_btn_sleep_b.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_scene.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\scene.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_setup.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\setup.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ipc_view.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\ipc_view.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw480dp_spinner_text2.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw480dp\\spinner_text2.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw240dp_alarm.xml.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\layout-sw240dp\\alarm.xml"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_btn_defence.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\main_btn_defence.png"
+    },
+    {
+        "merged": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setup_bkg.png.flat",
+        "source": "C:\\Project\\Android\\Awtek\\AW902S9\\security\\app\\src\\main\\res\\drawable\\setup_bkg.png"
+    }
+]

@@ -1,14 +1,20 @@
 package com.dnake.v700;
 
 import android.annotation.SuppressLint;
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningServiceInfo;
 import android.app.Service;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ServiceInfo;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.util.Log;
 
 import com.dnake.security.AlarmLabel;
 import com.dnake.security.WakeTask;
@@ -68,7 +74,29 @@ public class security extends Service {
 				if (i < 4)
 					zone[i].scene[2] = 1;
 			}
-		}
+
+            zone[0].sensor = 3;
+            zone[0].type = zone_c.NORMAL;
+            zone[0].mode = M_NC;
+            zone[1].sensor = 3;
+            zone[1].type = zone_c.NORMAL;
+            zone[1].mode = M_NC;
+            zone[2].sensor = 3;
+            zone[2].type = zone_c.NORMAL;
+            zone[2].mode = M_NC;
+            zone[3].sensor = 3;
+            zone[3].type = zone_c.NORMAL;
+            zone[3].mode = M_NC;
+            zone[4].sensor = 3;
+            zone[4].mode = M_NC;
+            zone[4].type = zone_c.NORMAL;
+            zone[5].sensor = 5;
+            zone[5].mode = M_NO;
+            zone[6].sensor = 1;
+            zone[6].mode = M_NO;
+            zone[7].sensor = 0;
+            zone[7].mode = M_NO;
+        }
 
 		dxml p = new dxml();
 		if (p.load(url)) {
@@ -320,6 +348,8 @@ public class security extends Service {
 			security.mBroadcast(); // 取消静音
 
 			NowIP.alarm(io);
+
+			security.broadcastAlarm(io);
 		}
 
 		public static void sendDefence() {
@@ -429,6 +459,37 @@ public class security extends Service {
 	}
 
 	public static class ProcessThread implements Runnable {
+
+        private int checkMessageGuardCycleCount = 0;
+        private void checkMessageGuard() {
+            try {
+                String messageGuardService = "md5dc8ea45572ec2ebfdb04eb209b6b829a.MessageGuardService";
+                boolean isRunning = false;
+                ActivityManager manager = (ActivityManager) ctx.getSystemService(Context.ACTIVITY_SERVICE);
+                for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+//				Log.d("desktop:list service", service.service.getClassName());
+                    if (messageGuardService.equals(service.service.getClassName())) {
+                        isRunning = true;
+                        Log.d("security:check", "MessageGuardService is running...");
+                    }
+                }
+
+                if (!isRunning) {
+                    ComponentName componentName = new ComponentName("com.awtek.messageGuard", messageGuardService);
+                    ServiceInfo info = ctx.getPackageManager().getServiceInfo(componentName,
+                            PackageManager.GET_META_DATA);
+                    if (info != null) {
+                        Intent intent = new Intent();
+                        intent.setComponent(componentName);
+                        ctx.startService(intent);
+                        Log.d("security:launch", messageGuardService);
+                    }
+                }
+            } catch (Exception ex) {
+                Log.d("security", ex.toString());
+            }
+        }
+
 		@Override
 		public void run() {
 			while (true) {
@@ -438,6 +499,14 @@ public class security extends Service {
 
 				if (dSound.mSound != null)
 					dSound.mSound.process();
+
+                checkMessageGuardCycleCount++;
+//                Log.d("security:check", "MessageGuard check cycle " + checkMessageGuardCycleCount);
+
+                if (checkMessageGuardCycleCount >= 50) {
+                    checkMessageGuard();
+                    checkMessageGuardCycleCount = 0;
+                }
 
 				try {
 					Thread.sleep(100);
@@ -584,7 +653,43 @@ public class security extends Service {
 		}
 	}
 
+    public static void broadcastAlarm(int io) {
+        if (ctx != null) {
+            Intent it = new Intent("com.awtek.messageGuard.Alarm");
+            it.putExtra("io", io);
+            it.putExtra("sensor", zone[io].sensor);
+            ctx.sendBroadcast(it);
+        }
+    }
+
+	public static void clearAlarm() {
+		if (ctx != null) {
+			Intent it = new Intent("com.awtek.messageGuard.Alarm");
+			it.putExtra("io", -1);
+			it.putExtra("sensor", -1);
+			ctx.sendBroadcast(it);
+		}
+	}
+
+    public static void broadcastDefence() {
+		if (ctx != null) {
+			int io = 0;
+			for (int i = 0; i < 8; i++) {
+				if (security.zone[i].defence == 1) {
+					io += (1 << i);
+				}
+			}
+			Intent it = new Intent("com.awtek.messageGuard.Alarm");
+			it.putExtra("io", io);
+			it.putExtra("sensor", -1);
+			ctx.sendBroadcast(it);
+		}
+    }
+
+
+	public static boolean forcedCheck = false;
     public static void invokeIO(boolean forcedCheck) {
+        security.forcedCheck = forcedCheck;
         if (security.defence == security.WITHDRAW || forcedCheck) {
             dmsg req = new dmsg();
             req.to("/control/io/sync", null);
@@ -595,16 +700,34 @@ public class security extends Service {
         if (zone == null)
             return false;
 
-        for (int i = 0; i < 8; i++) {
-            if(zone[i]!=null) {
-                if (zone[i].currentStatus != zone[i].mode) {
-                    return false;
-                }
-            }
-        }
+		for (int i = 0; i < 8; i++) {
+			if (zone[i] != null && zone[i].mode != security.M_BELL) {
+				if (zone[i].currentStatus != zone[i].mode) {
+					return false;
+				}
+			}
+		}
 
         return true;
     }
+
+	public static boolean checkSecurityWithDefence(int defence) {
+		if (zone == null)
+			return false;
+
+		for (int i = 0; i < 8; i++) {
+			if (zone[i] != null && zone[i].mode != security.M_BELL) {
+				if (zone[i].currentStatus != zone[i].mode && zone[i].scene[defence-1] == 1) {
+					if (i == 0 && security.timeout > 0) {
+						continue;
+					}
+					return false;
+				}
+			}
+		}
+
+		return true;
+	}
 
 //	public static int checkDelay() {
 //

@@ -8,9 +8,9 @@ import java.io.IOException;
 public final class sys {
 	public static int version_major = 1; // 主版本
 	public static int version_minor = 0; // 次版本
-	public static int version_minor2 = 2; // 次版本2
+	public static int version_minor2 = 4; // 次版本2
 
-	public static String version_date = "20160727"; // 日期
+	public static String version_date = "20180226"; // 日期
 
 	public static String version_ex = "(std)"; // 扩展标注
 

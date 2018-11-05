@@ -38,7 +38,7 @@ public class dmsg {
 
 	public static void setup_port() {
 		if (msg_port == null) {
-			msg_port = new __msg_port[10];
+			msg_port = new __msg_port[11];
 
 			msg_port[0] = new __msg_port();
 			msg_port[0].url = "/talk";
@@ -72,6 +72,11 @@ public class dmsg {
 			msg_port[9] = new __msg_port();
 			msg_port[9].url = "/media";
 			msg_port[9].port = 9805;
+
+			msg_port[10] = new __msg_port();
+			msg_port[10].url = "/media";
+			msg_port[10].port = 9805;
+
 
 			if (android.os.Build.VERSION.SDK_INT > 9) { //4.0以上版本强制开启网络发送
 			    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();

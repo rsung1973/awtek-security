@@ -1,5 +1,6 @@
 package com.dnake.security;
 
+import com.dnake.handler.DefenceHelper;
 import com.dnake.v700.ioctl;
 import com.dnake.v700.security;
 import com.dnake.v700.slaves;
@@ -59,9 +60,10 @@ public class AlarmLabel extends BaseLabel {
 	public void withdraw() {
 		String s = mPasswd.getText().toString();
 		if (s.equals(security.passwd)) {
-			security.setDefence(security.WITHDRAW);
+//			security.setDefence(security.WITHDRAW);
+//			slaves.setMarks(0x01);
+			DefenceHelper.setWithdraw();
 			security.withdraw();
-			slaves.setMarks(0x01);
 		} else {
 			sound.play(sound.passwd_err, false);
 		}

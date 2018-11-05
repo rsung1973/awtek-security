@@ -173,7 +173,8 @@ public class MainActivity extends BaseLabel {
                 continue;
             loopItem[i].setText(mode[security.zone[i].currentStatus]);
             securityItem[i].setText(mode[security.zone[i].mode]);
-            if (security.zone[i].currentStatus != security.zone[i].mode) {
+            if (security.zone[i].currentStatus != security.zone[i].mode
+                    && security.zone[i].mode != security.M_BELL) {
                 loopItem[i].setBackgroundColor(Color.argb(255, 255, 0, 0));
                 securityItem[i].setBackgroundColor(Color.argb(255, 255, 0, 0));
             } else {

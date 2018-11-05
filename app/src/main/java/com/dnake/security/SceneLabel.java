@@ -118,11 +118,11 @@ public class SceneLabel extends BaseLabel {
 
         security.timeout = (int)security.zoneDelayTs[s];
         security.zone[0].delay = s;
-        if(s>0) {
+//        if(s>0) {
             security.zone[0].type = security.zone_c.NORMAL;
-        } else {
-            security.zone[0].type = security.zone_c.H24;
-        }
+//        } else {
+//            security.zone[0].type = security.zone_c.H24;
+//        }
 
 		security.save();
 		slaves.setMarks(0x01);
